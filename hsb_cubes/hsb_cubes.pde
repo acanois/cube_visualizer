@@ -3,7 +3,7 @@ import ddf.minim.ugens.*;
 import ddf.minim.analysis.*;
 import ddf.minim.effects.*;
 
-Star sun;
+Cube cube;
 
 AudioInput in;
 
@@ -15,7 +15,7 @@ void setup() {
   size(1280, 720, OPENGL);
   frameRate(60);
   //background(20);
-  sun = new Star(width/2, height/2);
+  cube = new Cube(width/2, height/2);
   smooth(8);
   blendMode(ADD);
   
@@ -28,8 +28,8 @@ void draw() {
   colorMode(RGB);
   background(0);
   popStyle();
-  sun.update();
-  sun.display();
+  cube.update();
+  cube.display();
   /* Eye XYZ, Center XYZ, Up XYZ*/
   camera(width/2.0, height/2.0, (height*0.33) / tan(PI*30.0 / 180.0), 
          width/2.0, height/2.0, 0, 0, 1, 0);
